@@ -8,7 +8,7 @@
         );*/
         
        	session_start();
-$conn = new mysqli('mysqldbinstance.cclsb8bfrbwf.ap-south-1.rds.amazonaws.com', 'mysqldbinstance', 'mysqldbinstance', 'mysqldbinstance');
+$conn = new mysqli('rds-endpoint', 'username', 'password', 'database-name');
 // Check connection
 if ($conn->connect_error) {
 $_SESSION['message'] = "<font color='red'>". "Address NOT Saved "."<br>"."Error: <br>" . $conn->connect_error."</font>";
